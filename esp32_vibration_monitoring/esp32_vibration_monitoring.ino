@@ -34,10 +34,27 @@ void loop(void)
   /* Get a new sensor event */ 
   sensors_event_t event; 
   accel.getEvent(&event);
+
+ float x;
+ float y;
+ float z;
+
+ x = event.acceleration.x;
+ y = event.acceleration.y;
+ z = event.acceleration.z;
+ 
+Serial.print(x);
+Serial.print('\t');
+Serial.print(y);
+Serial.print('\t');
+Serial.println(z);
+
+
+ 
  
   /* Display the results (acceleration is measured in m/s^2) */
-  Serial.print("X: "); Serial.print(event.acceleration.x); Serial.print("  ");
-  Serial.print("Y: "); Serial.print(event.acceleration.y); Serial.print("  ");
-  Serial.print("Z: "); Serial.print(event.acceleration.z); Serial.print("  ");Serial.println("m/s^2 ");
-  delay(200);
+  //Serial.print("X: "); Serial.print(event.acceleration.x); Serial.print("  ");
+  //Serial.print("Y: "); Serial.print(event.acceleration.y); Serial.print("  ");
+  //Serial.print("Z: "); Serial.print(event.acceleration.z); Serial.print("  ");Serial.println("m/s^2 ");
+  delay(100);
 }
