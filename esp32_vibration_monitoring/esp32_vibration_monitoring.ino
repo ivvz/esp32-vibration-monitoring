@@ -42,12 +42,16 @@ void loop(void)
  x = event.acceleration.x;
  y = event.acceleration.y;
  z = event.acceleration.z;
+
  
-Serial.print(x);
-Serial.print('\t');
-Serial.print(y);
-Serial.print('\t');
-Serial.println(z);
+  Serial.print("x:"); 
+  Serial.print(x);  
+  Serial.print("\t");
+  Serial.print("y:");
+  Serial.print(y);
+  Serial.print("\t");
+  Serial.print("z:");
+  Serial.println(z);
 
 
  
